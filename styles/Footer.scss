@@ -1,0 +1,39 @@
+footer {
+  background-color: black;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  top: 80px;
+  width: 100%;
+  padding: $commonPadding;
+  padding-left: 4.6875rem;
+  padding-right: 4.6875rem;
+  display: flex;
+  justify-content: space-between;
+
+  .footer-link {
+    font-size: 16px;
+    line-height: 25px;
+    margin: 0 0 10px;
+    font-weight: 700;
+    display: block;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .sublink-list {
+    display: flex;
+    flex-direction: column;
+
+    .footer-sublink {
+      font-size: 16px;
+      margin: 0 0 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

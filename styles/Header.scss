@@ -1,0 +1,167 @@
+@mixin hoverAnimation($color1, $color2) {
+  @keyframes btnHover {
+    0% {
+      color: $color1;
+      background-color: $color2;
+    }
+    100% {
+      color: $color2;
+      background-color: $color1;
+    }
+  }
+
+  animation-name: btnHover;
+  animation-duration: 0.2s;
+}
+
+@mixin exitHover {
+  transition: background-color ease 0.2s;
+  transition: color ease 0.2s;
+}
+
+@mixin rowAlign {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.headerNav {
+  @include rowAlign;
+  position: fixed;
+  padding: $commonPadding;
+  line-height: 1.5625rem;
+  font-weight: 500;
+  font-size: 15px;
+  background-color: #fff;
+  z-index: 10;
+  width: 100%;
+
+  .logo {
+    margin-right: 25px;
+    min-height: 20px;
+    max-height: 20px;
+    min-width: 81px;
+    max-width: 81px;
+  }
+
+  .section {
+    @include rowAlign;
+    justify-content: space-between;
+    width: 100%;
+
+    @media (max-width: $smallScreens) {
+      justify-content: flex-end;
+    }
+  }
+
+  .link {
+    @include rowAlign;
+    padding: 0 25px;
+
+    &:hover {
+      cursor: pointer;
+
+      svg {
+        transition: transform ease 0.2s;
+        transform: rotate(180deg);
+      }
+    }
+
+    svg {
+      transition: transform ease 0.2s;
+    }
+  }
+
+  path {
+    fill: rgba(23, 18, 15, 1);
+    transition: fill 0.2s ease 0s;
+  }
+
+  .navLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media (max-width: $smallScreens) {
+      .hamburger-menu {
+        display: flex;
+        align-items: center;
+        text-align: right;
+
+        .icon-hide {
+          display: none;
+        }
+
+        .icon-show {
+          display: block;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .bigger-screens {
+        display: none;
+      }
+    }
+
+    @media (min-width: $smallScreens) {
+      .hamburger-menu {
+        display: none;
+      }
+
+      .bigger-screens {
+        display: flex;
+      }
+    }
+  }
+
+  .dropdown-elements {
+    position: fixed;
+    width: 100%;
+    top: 75px;
+    left: 0;
+    right: 0;
+
+    .smaller-screen-links {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding: $commonPadding;
+      position: relative;
+      justify-content: space-around;
+      z-index: 1;
+      left: 0;
+      background-color: #fff;
+
+      @media (min-width: $smallScreens) {
+        display: none;
+      }
+    }
+
+    .smaller-screen-links-hide {
+      display: none;
+    }
+  }
+
+
+  .logInBtn {
+    border-radius: $btnRadius;
+    border: 1px solid #d1d0ce;
+    padding: 5px 12px;
+    background-color: #fff;
+    font-weight: 500;
+    margin-left: 1.5625rem;
+    @include exitHover;
+
+    &:hover {
+      color: #fff;
+      background-color: #000;
+      border: 1px solid #000;
+      cursor: pointer;
+
+      @include hoverAnimation(#000, #fff);
+    }
+  }
+}

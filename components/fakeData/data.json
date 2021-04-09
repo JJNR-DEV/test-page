@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "link": "#",
+      "linkName": "Lorem Ipsum",
+      "dropdownData": [
+        {
+          "link": "#",
+          "linkName": "dolor"
+        },
+        {
+          "link": "#",
+          "linkName": "sit amet"
+        },
+        {
+          "linkList": [
+            {
+              "link": "#",
+              "linkName": "Lorem"
+            },
+            {
+              "link": "#",
+              "linkName": "Lorem"
+            },
+            {
+              "link": "#",
+              "linkName": "Lorem"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "link": "#",
+      "linkName": "Suspendisse quis odio",
+      "dropdownData": [
+        {
+          "link": "#",
+          "linkName": "sit amet"
+        },
+        {
+          "linkList": [
+            {
+              "link": "#",
+              "linkName": "Lorem"
+            },
+            {
+              "link": "#",
+              "linkName": "Lorem"
+            }
+          ]
+        },
+        {
+          "linkList": [
+            {
+              "link": "#",
+              "linkName": "Lorem"
+            },
+            {
+              "link": "#",
+              "linkName": "Lorem"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

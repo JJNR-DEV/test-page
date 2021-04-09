@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "link": "#",
+      "linkName": "Klarna",
+      "subLinks": [
+        {
+          "link": "#",
+          "linkName": "Lorem"
+        },
+        {
+          "link": "#",
+          "linkName": "Lorem"
+        },
+        {
+          "link": "#",
+          "linkName": "Lorem"
+        },
+        {
+          "link": "#",
+          "linkName": "Lorem"
+        }
+      ]
+    },
+    {
+      "link": "#",
+      "linkName": "Learn More",
+      "subLinks": [
+        {
+          "link": "#",
+          "linkName": "Lorem"
+        },
+        {
+          "link": "#",
+          "linkName": "Lorem"
+        },
+        {
+          "link": "#",
+          "linkName": "Lorem"
+        }
+      ]
+    },
+    {
+      "link": "#",
+      "linkName": "Privacy and Cookies",
+      "subLinks": [
+        {
+          "link": "#",
+          "linkName": "Lorem"
+        },
+        {
+          "link": "#",
+          "linkName": "Lorem"
+        }
+      ]
+    }
+  ]
+}

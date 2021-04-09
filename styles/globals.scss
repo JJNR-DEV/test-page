@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Klarna Text";
+  font-weight: 400;
+  src: url("https://x.klarnacdn.net/ui/fonts/v1.2/KlarnaText-Regular.woff2") format('woff2'),
+       url("https://x.klarnacdn.net/ui/fonts/v1.2/KlarnaText-Regular.woff") format('woff');
+}
+@font-face {
+  font-family: "Klarna Text";
+  font-weight: 500;
+  src: url("https://x.klarnacdn.net/ui/fonts/v1.2/KlarnaText-Medium.woff2") format('woff2'),
+       url("https://x.klarnacdn.net/ui/fonts/v1.2/KlarnaText-Medium.woff") format('woff');
+}
+@font-face {
+  font-family: "Klarna Text";
+  font-weight: 700;
+  src: url("https://x.klarnacdn.net/ui/fonts/v1.2/KlarnaText-Bold.woff2") format('woff2'),
+       url("https://x.klarnacdn.net/ui/fonts/v1.2/KlarnaText-Bold.woff") format('woff');
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Klarna Text ,Helvetica Neue ,Arial ,Helvetica ,sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: Klarna Text ,Helvetica Neue ,Arial ,Helvetica ,sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+$btnRadius: 20px;
+$smallScreens: 640px;
+$commonPadding: 25px;
+
+.darken-main {
+  background: rgba(0,0,0,.8);
+
+  img {
+    filter: brightness(0.2);
+  }
+}
+
+main {
+  padding: $commonPadding;
+  position: relative;
+  top: 80px;
+
+  .history-page-title {
+    padding-bottom: 10px;
+  }
+}
+
+@import './Header.scss';
+@import './Dropdown.scss';
+@import './History.scss';
+@import './Footer.scss';
