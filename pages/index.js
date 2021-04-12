@@ -24,7 +24,6 @@ export default function Home({ data }) {
       <main
         className={ dropdownActive ? 'darken-main main-content' : 'main-content' }
         onMouseEnter={ dropdownInactive } >
-        <h1 className='history-page-title'>Highlights Through History</h1>
         <Main allHistory={ data } />
       </main>
 

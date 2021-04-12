@@ -1,28 +1,55 @@
 @mixin verticalTimeline($left, $right) {
+  display: none;
   position: absolute;
   left: $left;
-  margin-top: 10px;
   right: $right;
   text-align: center;
+
+
+  @media (max-width: $tabletScreen) {
+    left: auto;
+    right: 15%;
+    margin-top: -2px;
+  }
+}
+
+.intro {
+  padding: $mainContainerPadding;
+  max-width: $maxScreen;
+  background: #ffb3c7;
+
+  @include smallerScreens;
+}
+
+.darken-main .intro {
+  @include darkerElement;
 }
 
 .full-story {
   position: relative;
+  padding: $mainContainerPadding;
+  max-width: $maxScreen;
+
+  @include smallerScreens;
+
 
   &::after {
     content: '';
     position: absolute;
     width: 2px;
-    /* background: #ffb3c7; */
     background: #000;
-    top: 25px;
-    bottom: 25px;
+    top: 3.125rem;
+    bottom: 3.125rem;
     left: 50%;
     margin-left: -1px;
+
+    @media (max-width: $tabletScreen) {
+      left: auto;
+      right: 10%;
+    }
   }
 
-  .history-event {
-    display: flex;
+  .history-timeline {
 
     &::after {
       content: '';
@@ -32,11 +59,38 @@
       left: 0;
       right: 0;
       margin: 0 auto;
-      background: #ffffff;
+      background-color: #ffffff;
       border: 2px solid #000;
       border-radius: 16px;
-      margin-top: 12.5px;
       z-index: 5;
+      transition: background-color 0.2s ease;
+
+      @media (max-width: $tabletScreen) {
+        left: 80%;
+      }
+    }
+
+    .year-for-timeline {
+      display: block !important;
+    }
+  }
+
+  .current {
+    &::after {
+      background-color: #ffb3c7;
+      transition: background-color 0.2s ease;
+    }
+  }
+
+  .history-event {
+    display: flex;
+
+    @media (max-width: 600px) {
+      padding-bottom: 20px;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
     }
 
     .info-picture {
@@ -46,17 +100,40 @@
       flex-direction: column;
       display: flex;
       justify-content: center;
-      padding: 25px;
+      padding: 3.125rem 0;
+
+      @media (max-width: $tabletScreen) {
+        max-width: 100%;
+        padding: 25px 0;
+      }
 
       img {
         max-width: 300px;
         max-height: 200px;
       }
     }
+
+    .left {
+      padding-right: 3.125rem;
+    }
+
+    .right {
+      @media (min-width: $tabletScreen) {
+        padding-left: 3.125rem;
+      }
+
+      @media (max-width: $tabletScreen) {
+        padding-right: 3.125rem;
+      }
+    }
   }
 
   .pair {
     flex-direction: row;
+
+    @media (max-width: $tabletScreen) {
+      flex-direction: column;
+    }
 
     .year-for-timeline {
       @include verticalTimeline(70px, 0);
@@ -66,9 +143,19 @@
   .inpair {
     flex-direction: row-reverse;
 
+    @media (max-width: $tabletScreen) {
+      flex-direction: column;
+    }
+
     .year-for-timeline {
       @include verticalTimeline(0, 70px);
     }
+  }
+}
+
+.darken-main .full-story .history-timeline {
+  &::after {
+    @include darkerElement;
   }
 }
 
@@ -78,9 +165,11 @@
   justify-content: flex-end;
   margin: 25px 0;
   position: relative;
+  max-width: 1440px;
+  flex-wrap: wrap;
 
   .year-btn {
-    margin: 0 10px;
+    margin: 5px 10px;
     border-bottom: 2px solid transparent;
     transition: border-color 0.2s ease;
 

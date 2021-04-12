@@ -38,19 +38,38 @@ button {
 }
 
 $btnRadius: 20px;
-$smallScreens: 640px;
 $commonPadding: 25px;
+$mainContainerPadding: 3.125rem 9.375rem;
+
+$maxScreen: 1440px;
+$smallScreens: 640px;
+$tabletScreen: 600px;
+
+@mixin smallerScreens {
+  @media (max-width: 850px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (max-width: $tabletScreen) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@mixin darkerElement {
+  filter: brightness(0.2);
+}
 
 .darken-main {
   background: rgba(0,0,0,.8);
 
   img {
-    filter: brightness(0.2);
+    @include darkerElement;
   }
 }
 
 main {
-  padding: $commonPadding;
   position: relative;
   top: 80px;
 

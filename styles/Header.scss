@@ -35,6 +35,19 @@
   background-color: #fff;
   z-index: 10;
   width: 100%;
+  padding-left: 4.6875rem;
+  padding-right: 4.6875rem;
+  max-width: $maxScreen;
+
+  @media (max-width: 1439px) {
+    padding-left: 3.125rem;
+    padding-right: 3.125rem;
+  }
+
+  @media (max-width: 850px) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 
   .logo {
     margin-right: 25px;
