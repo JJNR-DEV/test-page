@@ -39,6 +39,12 @@
   padding-right: 4.6875rem;
   max-width: $maxScreen;
 
+  @media (min-width: 1440px) {
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+
   @media (max-width: 1439px) {
     padding-left: 3.125rem;
     padding-right: 3.125rem;

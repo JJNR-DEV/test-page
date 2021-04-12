@@ -18,6 +18,10 @@
   max-width: $maxScreen;
   background: #ffb3c7;
 
+  @media (min-width: 1440px) {
+    margin: 0 auto;
+  }
+
   @include smallerScreens;
 }
 
@@ -32,6 +36,9 @@
 
   @include smallerScreens;
 
+  @media (min-width: 1440px) {
+    margin: 0 auto;
+  }
 
   &::after {
     content: '';
