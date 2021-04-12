@@ -4,6 +4,12 @@ This page has been develop following the design of Klarna's main website but it 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## DatoCMS
+
+Within the historical data, the titles are some facts collected from Wikipedia while the data itself its just Lorem Ipsum. This data is stored in [DatoCMS](https://www.datocms.com/). The purpose of this is to explore a real life case in where there is a Content Team in place responsible to create content for the website through a CMS, having in mind SEO.
+
+The choice of DatoCMS was due to being well recommended to work along side a serverless framework, but also because it provided a chance to explore how a headless CMS works and to explore GraphQL to fetch data.
+
 ## Getting Started
 
 To explore the code locally, first clone this repository to your local machine and once you have "cd" into it, run the code with the following command: 
@@ -18,9 +24,3 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Deploy on Vercel
 
 The page has been deployed on Vercel and can be found on the link https://klarna-template.vercel.app/.
-
-## DatoCMS
-
-Within the historical data, the titles are some facts collected from Wikipedia while the data itself its just Lorem Ipsum. This data is stored in [DatoCMS](https://www.datocms.com/). The purpose of this is to explore a real life case in where there is a Content Team in place responsible to create content for the website through a CMS, having in mind SEO.
-
-The choice of DatoCMS was due to being well recommended to work along side a serverless framework, but also because it provided a chance to explore how a headless CMS works and to explore GraphQL to fetch data.
