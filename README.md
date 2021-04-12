@@ -21,4 +21,6 @@ The page has been deployed on Vercel and can be found on the link https://klarna
 
 ## DatoCMS
 
-Within the historical data, the titles are some facts collected from Wikipedia while the data itself its just Lorem Ipsum. This data is stored in [DatoCMS](https://www.datocms.com/). The purpose of this is to explore a real life case in where there is a Content Team in place responsible to create content for the website through a CMS. The choice of DatoCMS was due to being well recommended to work along side a serverless framework, but also because it provided a chance to explore how a headless CMS works and to explore GraphQL to fetch data.
+Within the historical data, the titles are some facts collected from Wikipedia while the data itself its just Lorem Ipsum. This data is stored in [DatoCMS](https://www.datocms.com/). The purpose of this is to explore a real life case in where there is a Content Team in place responsible to create content for the website through a CMS, having in mind SEO.
+
+The choice of DatoCMS was due to being well recommended to work along side a serverless framework, but also because it provided a chance to explore how a headless CMS works and to explore GraphQL to fetch data.
